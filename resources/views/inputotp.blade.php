@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MechanicMaster - Sign Up</title>
+    <title>MechanicMaster - Log In</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="img/logo.jpg" rel="icon">
- 
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,30 +34,30 @@
     <style> 
         .divider:after,
         .divider:before {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: #eee;
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: #eee;
         }
         .h-custom {
-        height: calc(100% - 73px);
+          height: calc(100% - 73px);
         }
         @media (max-width: 450px) {
         .h-custom {
-        height: 100%;
+          height: 100%;
         }
         }
     </style>
 </head>
 
-<body>
-    <!-- Spinner Start
+<body  style="overflow: hidden">
+    <!-- Spinner Start 
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    Spinner End -->
+     Spinner End -->
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -73,7 +73,7 @@
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">LOGIN<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="/regist" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGNUP<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -82,63 +82,44 @@
         <div class="container-fluid h-custom">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-              <div class="card  ">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/bengkel.jpg" class="img-fluid" />
-                    <a href="#!">
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                    </a>
-                  </div>
-              </div>
-              <div class="card  ">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/bengkel2.jpg" class="img-fluid" />
-                    <a href="#!">
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                    </a>
-                  </div>
-              </div>
+                <div class="card  ">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img src="img/bengkel.jpg" class="img-fluid" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                      </a>
+                    </div>
+                </div>
+                <div class="card  ">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img src="img/bengkel2.jpg" class="img-fluid" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                      </a>
+                    </div>
+                </div>
+                
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <form action="{{route('send-email')}}" method="POST">
+              <form action="/checking" method="GET">
                 @csrf 
                 <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="Email" class="form-control form-control-lg"
-                    placeholder="Enter a valid email address" name="Email" required />
-                  <label class="form-label" for="Email">Email address</label>
-                </div>
-      
-                <!-- Telp input -->
-                <div class="form-outline mb-4">
-                    <input type="telp" id="Number" class="form-control form-control-lg"
-                      placeholder="Enter a valid phone number" name="Number" required/>
-                    <label class="form-label" for="Number">Telp</label>
-                  </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-3">
-                  <input type="password" id="Password" class="form-control form-control-lg @error('Password') is-invalid @enderror"
-                    placeholder="Enter password" name="Password" required autocomplete="current-password" />
-                  @error('Password')
+                <div class="form-outline mb-4">
+                  <input type="number" id="form3Example3" class="form-control form-control-lg @error('OTP') is-invalid @enderror"
+                    placeholder="Enter OTP Here" name="OTP" id="OTP" required min=100000 max=999999/>
+                  @error('OTP')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                  @enderror
-                  <label class="form-label" for="Password">Password</label>
+                  @enderror  
+                  <label class="form-label" for="form3Example3">OTP</label>
                 </div>
-
-                <!-- Confirm Password input -->
-                <div class="form-outline mb-3">
-                  <input type="password" id="Password" class="form-control form-control-lg @error('Password') is-invalid @enderror"
-                    placeholder="Confirm password" name="Password_confirmation" required autocomplete="current-password"/>
-                  <label class="form-label" for="Password">Confirm password</label>
-                </div>
-      
+            
                 <div class="text-center text-lg-start mt-4 pt-2">
                   <button type="submit" class="btn btn-primary btn-lg"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;"><a style="color: #eee;">Sign Up</a></button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">By signing up, you agree to our term of use and privacy policy</p>
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;"><a style="color: #eee;">Enter OTP</a></button>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Check Your Email for OTP Code</p>
                 </div>
       
               </form>
@@ -161,9 +142,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-	<script src="js/jquery.min.js"></script>
+	  <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
     <script src="js/main.js"></script>
 </body>
 

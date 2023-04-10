@@ -12,6 +12,13 @@ use App\Models\Account;
 class HomeDo extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    public function validnull() {
+        $var=session('account');
+        if($var == null){
+            return true;
+        } 
+        return false;
+    }
 
     public function default() {
         return view("home");
@@ -27,5 +34,23 @@ class HomeDo extends BaseController
     }
     public function availgarage() {
         return view("availgarage");
+    }
+    public function booking() {
+        if ($this->validnull()){
+            return redirect('/login');
+        }
+        return view("booking");
+    }
+    public function technicians() {
+        return view("technicians");
+    }
+    public function testimonial() {
+        return view("testimonial");
+    }
+    public function inputotp() {
+        return view("inputotp");
+    }
+    public function account() {
+        return view("account");
     }
 }

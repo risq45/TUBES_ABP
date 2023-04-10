@@ -6,8 +6,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 use Illuminate\Http\Request;
 use App\Models\Account;
+use App\Models\OTP;
 
 class UserDo extends BaseController
 {
@@ -18,17 +22,15 @@ class UserDo extends BaseController
         return view("regist");
     }
 
-    public function signup(Request $req){
-        $req->validate(['Password' => 'required|confirmed|min:6']);
-        $account = new Account;
-        $account->Email = $req->Email;
-        $account->Number = $req->Number;
-        $account->Password = sha1($req->Password);
-        $account->save();
-
-        return redirect('/login');
+    public function checking(request $req){
+        $var = session('OTP');
+        if ($var->OTP != $req->OTP) {
+            return redirect('/inputotp')->withErrors(['OTP' => 'OTP does not match !']);
+        } else {
+            session(['otp'=>null]);
+            return redirect('/login');
+        }
     }
-
     //Login Session
     public function login(){
         $var=session('account');
