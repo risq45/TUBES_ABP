@@ -131,7 +131,7 @@
                 <!-- Confirm Password input -->
                 <div class="form-outline mb-3">
                   <input type="password" id="Password" class="form-control form-control-lg @error('Password') is-invalid @enderror"
-                    placeholder="Confirm password" name="password_confirmation" required autocomplete="current-password"/>
+                    placeholder="Confirm password" name="Password_confirmation" required autocomplete="current-password"/>
                   <label class="form-label" for="Password">Confirm password</label>
                 </div>
       
