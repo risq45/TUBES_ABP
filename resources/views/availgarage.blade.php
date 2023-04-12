@@ -67,7 +67,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +88,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +109,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +130,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +159,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +180,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +201,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +222,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +251,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +272,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +293,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +314,10 @@
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                 <h6 class="text-success">Free booking fee</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button onclick="window.location.href='booking.html';" class="btn btn-outline-primary btn-sm mt-2" type="button">Book Now</button>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button onclick="window.location.href='/booking';" class="btn btn-primary btn-sm" type="button">Book Now</button>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">Like</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

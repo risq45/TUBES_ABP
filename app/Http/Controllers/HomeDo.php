@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Http\Request;
@@ -19,7 +20,6 @@ class HomeDo extends BaseController
         } 
         return false;
     }
-
     public function default() {
         return view("home");
     }
@@ -51,6 +51,47 @@ class HomeDo extends BaseController
         return view("inputotp");
     }
     public function account() {
+        $var=session('account');
+        if ($var->Username == "" && $var->Address == ""){
+            return view("account")->withErrors(['Username' => ['Please, Fill The Section !'], 'Address' => ['Please, Fill The Section !']]);
+        } else if ($var->Username == ""){
+            return view("account")->withErrors(['Username' => 'Please, Fill The Section !']);
+        } else if ($var->Address == ""){
+            return view("account")->withErrors(['Address' => 'Please, Fill The Section !']);
+        }
         return view("account");
+    }
+    public function admin() {
+        $var = session('account');
+        if ($var->Role == 'admin') {
+            return view("admin");
+        }
+        return redirect('/');
+    }
+    public function addgarage() {
+        $var = session('account');
+        if ($var->Role == 'admin') {
+            return view("addgarage");
+        }
+        return redirect('/');
+    }
+    public function editgarage() {
+        $var = session('account');
+        if ($var->Role == 'admin') {
+            return view("editgarage");
+        }
+        return redirect('/');
+        
+    }
+    public function deletegarage() {
+        $var = session('account');
+        if ($var->Role == 'admin') {
+            return view("deletegarage");
+        }
+        return redirect('/');
+        
+    }
+    public function paymentoption() {
+        return view("paymentoption");
     }
 }

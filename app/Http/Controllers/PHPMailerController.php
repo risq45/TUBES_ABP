@@ -22,6 +22,8 @@ class PHPMailerController extends Controller {
         $request->validate(['Password' => 'required|confirmed|min:6']);
         $account = new Account;
         $account->Email = $request->Email;
+        $account->Username = "";
+        $account->Address = "";
         $account->Number = $request->Number;
         $account->Password = sha1($request->Password);
         $account->Photo = "account-logo.png";

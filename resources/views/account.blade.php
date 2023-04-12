@@ -103,14 +103,14 @@
                                                     @csrf
                                                     <div class="row">
                                             
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <input type="file" name="image" class="form-control">
                                                         </div>
-                                            
-                                                        <div class="col-md-6">
+                                                        <a>&nbsp</a>
+                                                        <div class="col-md-12">
                                                             <button type="submit" class="btn btn-success">Upload</button>
                                                         </div>
-                                            
+                                    
                                                     </div>
                                                 </form>
                                             </div>
@@ -123,24 +123,39 @@
                                             <div class="card-body">
                                                 <form>
                                                     <!-- Form Group (name)-->
+                                                    @php
+                                                        $akun = Session::get('account');
+                                                    @endphp
                                                     <div class="mb-3">
                                                         <label class="small mb-1" for="inputname">Name</label>
-                                                        <input class="form-control" id="inputname" type="text" placeholder="Enter your name" value="">
+                                                        <input class="form-control @error('Username') is-invalid @enderror" name="Username" id="inputname" type="text" placeholder="Enter your name" value="{{$akun->Username}}">
+                                                        
+                                                        @error('Username') 
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong> {{$message}} </strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
+
                                                     <!-- Form Group (email address)-->
                                                     <div class="mb-3">
                                                         <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="">
+                                                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="{{$akun->Email}}">
                                                     </div>
                                                     <!-- Form Group (phone number)-->
                                                     <div class="mb-3">
                                                         <label class="small mb-1" for="inputPhone">Phone number</label>
-                                                        <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="">
+                                                        <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="{{$akun->Number}}">
                                                     </div>
                                                     <!-- Form Group (address)-->
                                                     <div class="mb-3">
                                                         <label class="small mb-1" for="inputAddress">Address</label>
-                                                        <input class="form-control" id="inputAddress" type="email" placeholder="Enter your address" value="">
+                                                        <input class="form-control @error('Address') is-invalid @enderror" id="inputAddress" type="email" placeholder="Enter your address" value="{{$akun->Address}}">
+                                                        @error('Address') 
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong> {{$message}} </strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
                                                     <!-- Save changes button-->
                                                     <button class="btn btn-primary" type="button">Save changes</button>

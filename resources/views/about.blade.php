@@ -29,7 +29,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Quality Servicing</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +38,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Expert Workers</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +47,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Modern Equipment</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +92,7 @@
                     <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
                         <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
                         <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5" style="background: rgba(0, 0, 0, .08);">
-                            <h1 class="display-4 text-white mb-0">15 <span class="fs-4">Years</span></h1>
+                            <h1 class="display-4 text-white mb-0">3 <span class="fs-4">Years</span></h1>
                             <h4 class="text-white">Experience</h4>
                         </div>
                     </div>
@@ -139,7 +136,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary py-3 px-5">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </div>
         </div>

@@ -26,6 +26,11 @@ Route::GET('/technicians', [HomeDo::class, 'technicians']);
 Route::GET('/testimonial', [HomeDo::class, 'testimonial']);
 Route::GET('/account', [HomeDo::class, 'account']);
 Route::GET('/inputotp', [HomeDo::class, 'inputotp']);
+Route::GET('/admin', [HomeDo::class, 'admin']);
+Route::GET('/addgarage', [HomeDo::class, 'addgarage']);
+Route::GET('/deletegarage', [HomeDo::class, 'deletegarage']);
+Route::GET('/editgarage', [HomeDo::class, 'editgarage']);
+Route::GET('/paymentoption', [HomeDo::class, 'paymentoption']);
 
 
 Route::GET('/regist', [UserDo::class, 'regist']);

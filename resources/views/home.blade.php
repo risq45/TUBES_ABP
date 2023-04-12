@@ -59,7 +59,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Quality Servicing</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="about.html">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +68,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Expert Workers</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="team.html">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +77,6 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Modern Equipment</h5>
                             <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                            <a class="text-secondary border-bottom" href="about.html">Read More</a>
                         </div>
                     </div>
                 </div>

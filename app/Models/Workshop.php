@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Account extends Authenticatable
+class Workshop extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,11 +18,10 @@ class Account extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'Email',
-        'Username',
-        'Number',
-        'Password',
+        'Nama',
         'Address',
+        'Motto',
+        'Photo',
     ];
 
     /**

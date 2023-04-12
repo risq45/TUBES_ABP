@@ -11,23 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accounts', function (Blueprint $table) {
-            $table->id('AccountID');
-            $table->string('Email', 24)->unique;
-            $table->unsignedBigInteger('Number');
-            $table->string('Username');
+        Schema::create('workshops', function (Blueprint $table) {
+            $table->id('WorkshopID');
+            $table->string('Nama')->unique;
             $table->string('Address');
-            $table->string('Password');
+            $table->string('Motto');
             $table->string('Photo');
             $table->timestamps();
         });
     }
 
-    /**p
+    /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('accounts');
+        Schema::dropIfExists('workshops');
     }
 };
