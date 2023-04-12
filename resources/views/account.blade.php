@@ -90,12 +90,29 @@
                                             <div class="card-header">Profile Picture</div>
                                             <div class="card-body text-center">
                                                 <!-- Profile picture image-->
-                                                <img class="img-account-profile rounded-circle mb-sm-3" src="img/account-logo.png" alt="">
+                                                <img class="img-account-profile rounded-circle mb-sm-3" src="img/<?php $data = Session::get('account'); echo($data['Photo']);?>" alt="">
                                                 <!-- Profile picture help block-->
-                                                <p>Valerie Luna</p>
+                                                <p><?php 
+                                                    $data = Session::get('account');
+                                                    echo($data['Email']);
+                                                ?></p>
                                                 <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                                                 <!-- Profile picture upload button-->
-                                                <button class="btn btn-primary" type="button">Upload new image</button>
+
+                                                <form action="{{route('image.upload.post')}}" method="POST" enctype="multipart/form-data">
+                                                @csrf
+                                                <div class="row">
+                                        
+                                                    <div class="col-md-6">
+                                                        <input type="file" name="image" class="form-control">
+                                                    </div>
+                                        
+                                                    <div class="col-md-6">
+                                                        <button type="submit" class="btn btn-success">Upload</button>
+                                                    </div>
+                                        
+                                                </div>
+                                            </form>
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>	
             <div class="tab-pane fade" id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                 <div class="container mt-5 mb-5">
                     <div class="d-flex justify-content-center row">

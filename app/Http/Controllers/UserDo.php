@@ -12,6 +12,8 @@ use PHPMailer\PHPMailer\Exception;
 use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\OTP;
+use mysqli;
+use Session;
 
 class UserDo extends BaseController
 {
@@ -65,4 +67,5 @@ class UserDo extends BaseController
         session(['account'=>null]);
         return redirect('/');
     }
+    
 }

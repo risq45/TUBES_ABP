@@ -24,7 +24,7 @@ class PHPMailerController extends Controller {
         $account->Email = $request->Email;
         $account->Number = $request->Number;
         $account->Password = sha1($request->Password);
-        //$account->Photo = "";
+        $account->Photo = "account-logo.png";
         $account->save();
 
         require base_path("vendor/autoload.php");
