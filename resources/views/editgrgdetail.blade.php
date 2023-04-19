@@ -68,22 +68,48 @@
                     </div>
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <form action="/editgaragedetail" method="post" class="tm-edit-product-form">
+                            <form action="/editgrg" method="post" class="tm-edit-product-form">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label for="nama">Nama</label>
-                                    <select class="custom-select tm-select-accounts" id="category" name="Nama">
-                                        <option disabled>Pilih bengkel</option>
-                                        @foreach ($grg1 as $gr)
-                                        <option value={{$gr->Nama}} > {{$gr->Nama}} </option>
-                                        @endforeach
+                                    <select class="custom-select tm-select-accounts" id="category" name="NamaOld">
+                                        <option value={{$grg2->Nama}} > {{$grg2->Nama}} </option>
                                     </select>
                                 </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Next</button>
+                                <div class="form-group mb-3">
+                                    <label for="name">Nama baru </label>
+                                    <input id="name" name="Nama" type="text" placeholder="Masukkan nama baru" class="form-control validate"/>
                                 </div>
-                            </form>                            
-                        </div>
+                                <div class="form-group mb-3">
+                                    <label for="alamat">Alamat</label>
+                                    <textarea class="form-control validate tm-small" rows="5" required name="Address">{{$grg2->Address}}</textarea>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="category">Jenis kendaraan yang ditangani</label>
+                                    <select class="custom-select" id="category" name="JenisKendaraan">
+                                        <option selected="">Select category</option>
+                                        <option value="Mobil">Mobil</option>
+                                        <option value="Motor">Motor</option>
+                                        <option value="MobilMotor">Mobil & Motor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="durasi">Biaya perbaikan yang dibutuhkan</label>
+                                    <input id="durasi" name="Biaya" type="text" class="form-control" required="">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Now</button>
+                                </div>                          
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                                <div class="tm-product-img-edit mx-auto">
+                                    <img src="{{asset('img/bengkel.jpg')}}" alt="Product image" class="img-fluid d-block mx-auto">
+                                </div>
+                                <div class="custom-file mt-3 mb-3">
+                                    <input id="fileInput" type="file" style="display:none;" />
+                                    <input type="button"class="btn btn-primary btn-block mx-auto" value="CHANGE IMAGE NOW" onclick="document.getElementById('fileInput').click();"/>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>

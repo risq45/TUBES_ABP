@@ -21,12 +21,16 @@
                               <h6 class="mb-0" style="color: red; text-align: center;">Fill This Form To Make Us Access Your Location Easier</h6>
                             </div>
                             <div class="card-body">
-                              <form>                      
+                              <form action="/booking" method="POST">                      
                                 <!-- Name input -->
                                 <div class="form-outline mb-4">
-                                  <input type="text" id="form7Example3" class="form-control" />
-                                  <label class="form-label" for="form7Example3">Name</label>
-                                </div>
+                                  <select class="form-select border-0" style="height: 55px;">
+                                      <option selected>Select A Service</option>
+                                      @foreach ($garage as $gr)
+                                      <option value={{$gr->Nama}} > {{$gr ->Nama}} </option>
+                                      @endforeach
+                                  </select>
+                              </div>
                       
                                 <!-- Address input -->
                                 <div class="form-outline mb-4">
@@ -38,27 +42,21 @@
                                 <div class="form-outline mb-4">
                                     <select class="form-select border-0" style="height: 55px;">
                                         <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        @foreach ($garage as $gr)
+                                        @foreach ($service as $svc)
+                                        @if ($gr->WorkshopID == $svc->WorkshopID)
+                                        <option value={{$svc->JenisKendaraan}} > {{$svc->JenisKendaraan}} </option>
+                                        @endif
+                                        @endforeach
+                                        @endforeach
                                     </select>
                                 </div>
                       
                                 <!-- Vehicle input -->
-                                <div class="form-outline mb-4">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Vehicle</option>
-                                        <option value="1">Motorcycle</option>
-                                        <option value="2">Car</option>
-                                        <option value="3">Truck</option>
-                                    </select>                                  
-                                </div>
+                              
                       
                                 <!-- Message input -->
-                                <div class="form-outline mb-4">
-                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
-                                  <label class="form-label" for="form7Example7">Additional information</label>
-                                </div>
+                                
                               </form>
                             </div>
                           </div>
@@ -89,7 +87,7 @@
                                 </li>
                               </ul>
                       
-                              <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href='paymentoption.html';">
+                              <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href='/paymentoption';">
                                 SUBMIT
                               </button>
                               <a href="paymentoption.html">Metode pembayaran</a>

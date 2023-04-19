@@ -26,10 +26,10 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -65,7 +65,7 @@
     <!-- Navbar End -->
 
     <!-- Body Start -->
-    <body style="background-image: url('img/bengkel.jpg');">
+    <body style="background-image: url('{{asset('img/bengkel.jpg')}}');">
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp">

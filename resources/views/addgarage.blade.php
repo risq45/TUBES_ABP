@@ -76,29 +76,32 @@
                     </div>
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <form action="" class="tm-edit-product-form">
+                            <form action="/addgarage" method="POST" class="tm-edit-product-form">
+                                @csrf
                                 <div class="form-group mb-3">
                                     <label for="nama">Nama</label>
-                                    <input id="nama" name="nama" type="text" class="form-control validate" required="">
+                                    <input id="nama" name="Nama" type="text" class="form-control validate" required="">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="alamat">Alamat</label>
-                                    <textarea class="form-control validate" rows="3" required=""></textarea>
+                                    <textarea class="form-control validate" rows="3" required="" name="Address"></textarea>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="category">Jenis kendaraan yang ditangani</label>
-                                    <select class="custom-select" id="category">
+                                    <select class="custom-select" id="category" name="JenisKendaraan">
                                         <option selected="">Select category</option>
-                                        <option value="1">Car</option>
-                                        <option value="2">Motorcycle</option>
-                                        <option value="3">Car and Motorcycle</option>
+                                        <option value="Mobil">Mobil</option>
+                                        <option value="Motor">Motor</option>
+                                        <option value="MobilMotor">Mobil & Motor</option>
                                     </select>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="durasi">Lama perbaikan yang dibutuhkan</label>
-                                    <input id="durasi" name="durasi" type="text" class="form-control validate" required="">
+                                    <label for="durasi">Biaya perbaikan yang dibutuhkan</label>
+                                    <input id="durasi" name="Biaya" type="text" class="form-control validate" required="">
                                 </div>
-                                
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                                </div>
                             </form>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
@@ -110,9 +113,7 @@
                                 <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();">
                             </div>
                         </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -76,20 +76,17 @@
                     </div>
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <form action="" class="tm-edit-product-form">
+                            <form action="/deletegrg" method="POST" class="tm-edit-product-form">
+                                @csrf
                                 <div class="form-group mb-3">
                                     <label for="nama">Nama</label>
-                                    <select class="custom-select tm-select-accounts" id="category">
-                                        <option>Pilih bengkel</option>
-                                        <option>Bengkel ABC</option>
-                                        <option>Bengkel ABC</option>
-                                        <option>Bengkel ABC</option>
+                                    <select class="custom-select tm-select-accounts" id="category" name="Nama">
+                                        <option disabled>Pilih bengkel</option>
+                                        @foreach ($grg1 as $gr)
+                                        <option value={{$gr->Nama}} > {{$gr->Nama}} </option>
+                                        @endforeach
                                     </select>
                                 </div>  
-                                <div class="form-group mb-3">
-                                    <label for="alamat">Alasan hapus</label>
-                                    <textarea class="form-control validate" rows="3" required=""></textarea>
-                                </div>
                                 <button type="submit" class="btn btn-primary btn-block text-uppercase">Delete Now</button>
                             </form>
                         </div>

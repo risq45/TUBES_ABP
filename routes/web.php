@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeDo;
 use App\Http\Controllers\UserDo;
+use App\Http\Controllers\AdminDo;
 use App\Http\Controllers\PHPMailerController;
 use App\Http\Controllers\ImageUploadController;
 /*
@@ -30,6 +31,7 @@ Route::GET('/admin', [HomeDo::class, 'admin']);
 Route::GET('/addgarage', [HomeDo::class, 'addgarage']);
 Route::GET('/deletegarage', [HomeDo::class, 'deletegarage']);
 Route::GET('/editgarage', [HomeDo::class, 'editgarage']);
+Route::POST('/editgaragedetail', [HomeDo::class, 'editgaragedetail']);
 Route::GET('/paymentoption', [HomeDo::class, 'paymentoption']);
 
 
@@ -41,7 +43,11 @@ Route::GET("email", [PHPMailerController::class, "email"])->name("email");
 Route::POST('/regist', [UserDo::class, 'signup']);
 Route::POST('/login', [UserDo::class, 'signin']);
 Route::POST('/logout', [UserDo::class, 'signout']);
+Route::POST('/booking', [UserDo::class, 'booking']);
 Route::POST("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
+Route::POST('/addgarage', [AdminDo::class, 'addgrg']);
+Route::POST('/editgrg', [AdminDo::class, 'editgrg']);
+Route::POST('/deletegrg', [AdminDo::class, 'deletegrg']);
 
 
 Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');

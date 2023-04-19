@@ -8,7 +8,12 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Models\Account;
+use App\Models\Workshop;
+use App\Models\Favorite;
+use App\Models\Service;
+use App\Models\Transaction;
 
 class HomeDo extends BaseController
 {
@@ -39,7 +44,9 @@ class HomeDo extends BaseController
         if ($this->validnull()){
             return redirect('/login');
         }
-        return view("booking");
+        $garage = DB::select('select * from workshops');
+        $service = DB::select('select * from services');
+        return view("booking", ['garage'=>$garage] , ['service'=>$service]);
     }
     public function technicians() {
         return view("technicians");
@@ -71,22 +78,32 @@ class HomeDo extends BaseController
     public function addgarage() {
         $var = session('account');
         if ($var->Role == 'admin') {
-            return view("addgarage");
+            $garage = DB::select('select * from workshops');
+            return view("addgarage", ['garage'=>$garage]);
         }
         return redirect('/');
     }
     public function editgarage() {
         $var = session('account');
         if ($var->Role == 'admin') {
-            return view("editgarage");
+            $garage = DB::select('select * from workshops');
+            return view("editgarage", ['grg1'=>$garage]);
         }
         return redirect('/');
-        
+    }
+    public function editgaragedetail(Request $req) {
+        $var = session('account');
+        if ($var->Role == 'admin') {
+            $garage = DB::table('workshops')->where('Nama', $req->Nama)->first();
+            return view("editgrgdetail", ['grg2'=>$garage]);
+        }
+        return redirect('/');
     }
     public function deletegarage() {
         $var = session('account');
         if ($var->Role == 'admin') {
-            return view("deletegarage");
+            $garage = DB::select('select * from workshops');
+            return view("deletegarage", ['grg1'=>$garage]);
         }
         return redirect('/');
         

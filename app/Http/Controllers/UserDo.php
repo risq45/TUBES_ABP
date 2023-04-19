@@ -62,10 +62,21 @@ class UserDo extends BaseController
         }
     }
 
+    
     //Logout Session
     public function signout(){
         session(['account'=>null]);
         return redirect('/');
     }
     
+    public function booking(Request $req){
+        $akun = session('account');
+        $akunid =  DB::table('accounts')->where('Email', $akun->Emal)->pluck('AccountID')[0];
+        $book = new Transaction;
+        $book->WorkshopID = $req->bengkel;
+        $book->AccountID = $akunid;
+        $book->ServiceID = $req->servis;
+        $book->Status = "In-Process";
+        $book->save();
+    }
 }

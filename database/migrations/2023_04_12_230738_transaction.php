@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('WorkshopID');
             $table->unsignedBigInteger('AccountID');
             $table->unsignedBigInteger('ServiceID');
+            $table->string('Status');
             $table->foreign('AccountID')
                 ->references('AccountID')->on('accounts')->onDelete('cascade');
             $table->foreign('WorkshopID')

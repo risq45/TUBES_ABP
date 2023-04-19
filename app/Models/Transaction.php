@@ -21,6 +21,7 @@ class Transaction extends Authenticatable
         'WorkshopID',
         'AccountID',
         'ServiceID',
+        'Status',
     ];
 
     /**
